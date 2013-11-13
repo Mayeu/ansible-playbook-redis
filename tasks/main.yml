@@ -1,3 +1,6 @@
 ---
-- name: Install Redis server
+- name: install Redis server
   action: apt name=redis-server state=latest
+
+- name: check if Redis is running
+  action: service name=redis-server state=started
