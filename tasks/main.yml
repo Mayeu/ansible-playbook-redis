@@ -1,6 +1,6 @@
 ---
 - name: install Redis server
-  apt: name=redis-server state=latest
+  apt: name=redis-server state=latest update_cache=yes
 
 - name: check if Redis is running
   service: name=redis-server state=started
